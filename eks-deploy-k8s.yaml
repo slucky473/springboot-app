@@ -19,7 +19,7 @@ spec:
         image: 620603608090.dkr.ecr.ap-southeast-1.amazonaws.com/k8s
         imagePullPolicy: Always
         ports:
-        - containerPort: 8085
+        - containerPort: 8000
           name: http
           protocol: TCP
 # service type loadbalancer       
@@ -36,7 +36,7 @@ spec:
   - name: http
     port: 80
     protocol: TCP
-    targetPort: 8085
+    targetPort: 8000
   type: LoadBalancer
   selector:
     app: springboot-app
